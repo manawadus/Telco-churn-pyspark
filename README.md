@@ -4,12 +4,6 @@ This project develops a machine learning pipeline to predict customer churn in a
 
 The project simulates a real world telecom analytics pipeline, combining large-scale data processing, machine learning, and business focused insights.
 
-# 📊 Telecom Customer Churn Prediction using PySpark & XGBoost
-
-## 🚀 Overview
-
-This project predicts customer churn in a telecom company using PySpark and machine learning techniques. It simulates a real-world analytics workflow including data preprocessing, feature engineering, model building, and explainability.
-
 ---
 
 ## Project Structure
