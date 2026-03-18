@@ -83,4 +83,4 @@ https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 ## 👤 Author
 
 Suresh Manawadu
-MSc Data Science (Distinction), Coventry University
+MSc Data Science, Coventry University
