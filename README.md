@@ -25,12 +25,13 @@ telco-churn-pyspark-xgboost/
 
 ## Technologies Used
 
-* PySpark
-* Pandas
-* Scikit-learn
-* XGBoost
-* SHAP (Explainable AI)
-* Matplotlib / Seaborn
+- PySpark (data processing & feature engineering)
+- Pandas (EDA)
+- Scikit-learn (model evaluation & metrics)
+- XGBoost (gradient boosting model)
+- Random Forest (baseline model)
+- SHAP (Explainable AI)
+- Matplotlib / Seaborn (visualisation)
 
 ---
 
