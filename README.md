@@ -39,30 +39,30 @@ telco-churn-pyspark-xgboost/
 1. Data Cleaning & Preprocessing
 - Handled missing values and corrected data types (e.g., TotalCharges)
 - Filtered invalid records (e.g., zero tenure)
-Exploratory Data Analysis (EDA)
-Analysed churn distribution and class imbalance
-Examined relationships between churn and key features (tenure, contract type, charges)
-Feature Engineering (PySpark ML Pipeline)
-Categorical encoding (StringIndexer + OneHotEncoder)
-Feature vector assembly (VectorAssembler)
-Scalable pipeline for production-style processing
-Model Training
-Random Forest (baseline)
-XGBoost with hyperparameter tuning (GridSearchCV)
-Class imbalance handled using scale_pos_weight
-Advanced Model Evaluation
-Fine threshold tuning (0.01 granularity)
-Metrics:
-Accuracy
-Precision
-Recall
-F1-score
-ROC-AUC
-PR-AUC (critical for imbalanced data)
-Fair comparison by evaluating both models at optimal thresholds
-Explainability
-SHAP used to interpret model predictions
-Feature importance derived from actual engineered feature names
+2. Exploratory Data Analysis (EDA)
+- Analysed churn distribution and class imbalance
+- Examined relationships between churn and key features (tenure, contract type, charges)
+3. Feature Engineering (PySpark ML Pipeline)
+- Categorical encoding (StringIndexer + OneHotEncoder)
+- Feature vector assembly (VectorAssembler)
+- Scalable pipeline for production-style processing
+4. Model Training
+- Random Forest (baseline)
+- XGBoost with hyperparameter tuning (GridSearchCV)
+- Class imbalance handled using scale_pos_weight
+5. Advanced Model Evaluation
+- Fine threshold tuning (0.01 granularity)
+- Metrics:
+   - Accuracy
+   - Precision
+   - Recall
+   - F1-score
+   - ROC-AUC
+   - PR-AUC (critical for imbalanced data)
+- Fair comparison by evaluating both models at optimal thresholds
+6. Explainability
+- SHAP used to interpret model predictions
+- Feature importance derived from actual engineered feature names
 
 ---
 
