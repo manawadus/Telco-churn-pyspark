@@ -66,41 +66,62 @@ telco-churn-pyspark-xgboost/
 
 ---
 
-## Key Insights
+## Model Results (Tuned Thresholds)
 
-* Customers with **low tenure** are more likely to churn
-* **Month-to-month contracts** significantly increase churn risk
-* **Higher monthly charges** are associated with higher churn
+| Model                 | Accuracy | Precision | Recall   | F1       | ROC AUC | PR AUC    |
+| --------------------- | -------- | --------- | -------- | -------- | ------- | --------- |
+| Random Forest (Tuned) | 0.80     | **0.61**  | 0.70     | **0.65** | 0.856   | 0.677     |
+| XGBoost (Tuned)       | 0.77     | 0.54      | **0.82** | 0.65     | 0.856   | **0.684** |
+
 
 ---
 
-## Results
+## Key Insights
+- Customers with low tenure are more likely to churn
+- Month-to-month contracts significantly increase churn risk
+- Higher monthly charges are associated with higher churn
+- Dataset is imbalanced, requiring specialised evaluation (PR-AUC, Recall)
 
-| Model         | Accuracy | F1 Score | ROC AUC |
-| ------------- | -------- | -------- | ------- |
-| Random Forest | 0.80     | 0.79     | 0.86    |
-| XGBoost       | 0.76     | 0.64     | 0.86    |
+---
+
+## Model Behaviour
+- Random Forest
+   - Higher accuracy and precision
+   - More conservative predictions (fewer false positives)
+- XGBoost
+   - Significantly higher recall (0.82)
+   - Better at identifying churners
+   - Slightly higher PR-AUC → better minority class performance
 
 ---
 
 ## Business Impact
 
-This solution helps telecom companies:
+In telecom churn prediction, the cost of missing a churner (false negative) is significantly higher than incorrectly targeting a non-churner (false positive).
 
-* Identify high-risk customers
-* Improve retention strategies
-* Make data-driven decisions
+- Random Forest
+   - Provides stable predictions
+   - Reduces unnecessary retention actions
+   - However, misses a larger number of potential churners
+- XGBoost
+   - Detects a higher proportion of churners (~82% recall)
+   - Enables earlier and more effective retention strategies
+   - Accepts a higher number of false positives as a trade-off
+     
+---
+## Final Recommendation:
+XGBoost is the preferred model for this use case, as it aligns better with business objectives by maximising churn detection and reducing revenue loss.
 
 ---
 
-## 📎 Dataset
+## Dataset
 
 Download from:
 https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
 ---
 
-## 👤 Author
+## Author
 
 Suresh Manawadu
 MSc Data Science, Coventry University
