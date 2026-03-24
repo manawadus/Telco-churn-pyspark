@@ -130,8 +130,8 @@ MSc Data Science, Coventry University
 
 This machine learning pipeline is connected to an interactive Power BI dashboard that visualises churn predictions and business insights.
 
-View Dashboard Repository:  
-https://github.com/manawadus/your-dashboard-repo-name
+View Dashboard Repository:
+https://github.com/manawadus/Telecom-churn-powerbi-dashboard
 
 ### Dashboard Features
 - Customer churn risk segmentation
