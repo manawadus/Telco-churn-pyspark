@@ -125,3 +125,18 @@ https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
 Suresh Manawadu
 MSc Data Science, Coventry University
+
+## Related Project: Dashboard
+
+This machine learning pipeline is connected to an interactive Power BI dashboard that visualises churn predictions and business insights.
+
+View Dashboard Repository:  
+https://github.com/manawadus/your-dashboard-repo-name
+
+### Dashboard Features
+- Customer churn risk segmentation
+- KPI monitoring (churn rate, retention trends)
+- High-risk customer identification
+- Business insights for decision-making
+
+This demonstrates how machine learning outputs are transformed into actionable business intelligence.
