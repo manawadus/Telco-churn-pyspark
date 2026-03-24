@@ -1,8 +1,8 @@
 # Telecom Customer Churn Prediction (PySpark + XGBoost)
 
-This project develops a machine learning pipeline to predict customer churn in a telecom dataset using PySpark. It includes exploratory data analysis (EDA), feature engineering, model comparison (Random Forest vs XGBoost), and model explainability using SHAP.
+This project develops a machine learning pipeline to predict customer churn in a telecom dataset using PySpark. It includes large scale data processing, exploratory data analysis (EDA) feature engineering, advanced model evaluation, and model explainability using SHAP.
 
-The project simulates a real world telecom analytics pipeline, combining large-scale data processing, machine learning, and business focused insights.
+The solution moves beyond traditional classification by incorporating threshold optimisation and business-aligned evaluation, ensuring the model is suitable for real world decision making.
 
 ---
 
@@ -26,23 +26,43 @@ telco-churn-pyspark-xgboost/
 ## Technologies Used
 
 - PySpark (data processing & feature engineering)
-- Pandas (EDA)
+- Pandas exploratory data analysis (EDA)
 - Scikit-learn (model evaluation & metrics)
 - XGBoost (gradient boosting model)
 - Random Forest (baseline model)
-- SHAP (Explainable AI)
+- SHAP  (Explainable AI)
 - Matplotlib / Seaborn (visualisation)
 
 ---
 
-## Key Steps
-
+## Pipeline Overview
 1. Data Cleaning & Preprocessing
-2. Exploratory Data Analysis (EDA)
-3. Feature Engineering
-4. Model Training (Random Forest, XGBoost)
-5. Model Evaluation (Accuracy, F1, ROC)
-6. Explainability using SHAP
+- Handled missing values and corrected data types (e.g., TotalCharges)
+- Filtered invalid records (e.g., zero tenure)
+Exploratory Data Analysis (EDA)
+Analysed churn distribution and class imbalance
+Examined relationships between churn and key features (tenure, contract type, charges)
+Feature Engineering (PySpark ML Pipeline)
+Categorical encoding (StringIndexer + OneHotEncoder)
+Feature vector assembly (VectorAssembler)
+Scalable pipeline for production-style processing
+Model Training
+Random Forest (baseline)
+XGBoost with hyperparameter tuning (GridSearchCV)
+Class imbalance handled using scale_pos_weight
+Advanced Model Evaluation
+Fine threshold tuning (0.01 granularity)
+Metrics:
+Accuracy
+Precision
+Recall
+F1-score
+ROC-AUC
+PR-AUC (critical for imbalanced data)
+Fair comparison by evaluating both models at optimal thresholds
+Explainability
+SHAP used to interpret model predictions
+Feature importance derived from actual engineered feature names
 
 ---
 
